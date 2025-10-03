@@ -414,13 +414,20 @@ h3 { font-size: var(--h3); }
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
-/* Bottom Navigation - Enhanced */
+/* Bottom Navigation - E-Wallet Style with Floating Center Button */
 .navbar.fixed-bottom {
   height: var(--nav-height);
   background: var(--card-bg);
-  border-top: 1px solid #E2E8F0;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-  padding: var(--gap-sm) 0;
+  border-top: none;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  z-index: 1000;
+}
+
+.navbar.fixed-bottom .container {
+  position: relative;
+  height: 100%;
+  padding: 0 var(--gap);
 }
 
 .nav-item {
@@ -431,11 +438,11 @@ h3 { font-size: var(--h3); }
   justify-content: center;
   gap: 4px;
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   transition: var(--transition);
   position: relative;
-  padding: 8px;
-  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  z-index: 1;
 }
 
 .nav-item i {
@@ -444,25 +451,81 @@ h3 { font-size: var(--h3); }
 }
 
 .nav-item .small {
-  font-size: var(--tiny);
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-.nav-item:hover,
-.nav-item.active {
+.nav-item:hover {
+  color: var(--text-secondary);
+}
+
+.nav-item.active,
+.nav-item.text-primary {
   color: var(--color-primary);
 }
 
-.nav-item.active::before {
+.nav-item.active .small,
+.nav-item.text-primary .small {
+  font-weight: 600;
+}
+
+/* Floating Center Action Button (for specific pages) */
+.nav-item-center {
+  position: absolute;
+  left: 50%;
+  top: -24px;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+  border: 4px solid var(--card-bg);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.nav-item-center:hover {
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.5);
+}
+
+.nav-item-center i {
+  font-size: 28px;
+  color: var(--text-white);
+}
+
+/* Active State with Pill Background */
+.nav-item.active::after {
   content: '';
   position: absolute;
-  top: -8px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 4px;
-  background: var(--color-primary);
-  border-radius: 0 0 4px 4px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 40px;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 20px;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.nav-item.text-primary::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 40px;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 20px;
+  z-index: -1;
+  transition: var(--transition);
 }
 
 /* Badges - Enhanced */
