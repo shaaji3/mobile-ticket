@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": "Summer Beats Concert",
+    "date": "2025-11-14T19:00:00Z",
+    "location": "Main Arena, Lagos",
+    "image": "assets/img/event1.jpg",
+    "categories": ["Music", "Concert"],
+    "tickets": [
+      {"type":"Regular","price":5000,"qty_available":200},
+      {"type":"VIP","price":15000,"qty_available":50}
+    ],
+    "description": "Join top artists for a night of unforgettable music under the stars. Experience the best of Afrobeats, Pop, and Rock in a vibrant atmosphere. Food, drinks, and merchandise will be available."
+  },
+  {
+    "id": 2,
+    "title": "Innovate Lagos Tech Conference",
+    "date": "2025-12-05T09:00:00Z",
+    "location": "Eko Hotel Convention Centre",
+    "image": "assets/img/event2.jpg",
+    "categories": ["Technology", "Conference"],
+    "tickets": [
+      {"type":"Student","price":2500,"qty_available":100},
+      {"type":"Professional","price":10000,"qty_available":300}
+    ],
+    "description": "The premier tech conference in West Africa. Hear from industry leaders, participate in workshops, and network with the brightest minds in technology. Topics include AI, Fintech, and SaaS."
+  }
+]
