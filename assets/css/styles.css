@@ -1,0 +1,41 @@
+:root{
+  --max-width: 420px;
+
+  /* Colors */
+  --color-primary: #2B6CB0;    /* CTA */
+  --color-secondary: #38B2AC;  /* Highlights */
+  --color-accent: #F56565;     /* Errors/Cancel */
+  --bg: #F9FAFB;
+  --card-bg: #FFFFFF;
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --muted: #A0AEC0;
+
+  /* Typography */
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --h1: 22px;
+  --h2: 18px;
+  --body: 15px;
+  --small: 12px;
+
+  /* Spacing & radius */
+  --gap: 16px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Buttons */
+  --btn-height: 48px;
+  --nav-height: 64px;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--bg);
+    color: var(--text-primary);
+}
+
+.app-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
