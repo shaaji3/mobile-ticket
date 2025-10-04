@@ -12,31 +12,12 @@ $role = 'organizer';
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    body { font-family: var(--font-family); background: var(--bg); color: var(--text-primary); padding-bottom: var(--nav-height); }
-    .metric-card {
-        background-color: var(--card-bg);
-        border-radius: var(--radius-md);
-        padding: var(--gap);
-        margin-bottom: var(--gap);
-        text-align: center;
-    }
-    .chart-placeholder {
-        background-color: #e2e8f0;
-        border-radius: var(--radius-md);
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-secondary);
-    }
-  </style>
 </head>
 <body>
-  <main class="app-container p-3" style="max-width:var(--max-width);margin:0 auto;">
+  <main class="app-container p-3">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Dashboard</h1>
-        <a href="#" class="btn btn-primary" style="background-color: var(--color-primary);"><i class="bi bi-plus-circle"></i> Create Event</a>
+        <a href="#" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Create Event</a>
     </div>
 
     <div class="row">
@@ -76,8 +57,8 @@ $role = 'organizer';
     </ul>
   </main>
 
-  <nav class="navbar fixed-bottom navbar-light bg-white border-top" style="height:var(--nav-height);">
-    <div class="container d-flex justify-content-around align-items-center" style="max-width:var(--max-width);">
+  <nav class="navbar fixed-bottom navbar-light bg-white border-top">
+    <div class="container d-flex justify-content-around align-items-center">
         <a href="dashboard.php" class="text-center nav-item text-primary"><i class="bi bi-speedometer2 fs-4"></i><div class="small">Dashboard</div></a>
         <a href="myevents.php" class="text-center nav-item"><i class="bi bi-calendar fs-4"></i><div class="small">My Events</div></a>
         <a href="dashboard.php#reports" class="text-center nav-item"><i class="bi bi-bar-chart fs-4"></i><div class="small">Reports</div></a>
@@ -87,6 +68,6 @@ $role = 'organizer';
   </nav>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
